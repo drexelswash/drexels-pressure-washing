@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drexel's Pressure Washing | Baltimore Exterior Cleaning</title>
+  <meta name="description" content="Drexel's Pressure Washing provides professional house washing, roof cleaning, concrete cleaning, and gutter brightening in Baltimore, MD and surrounding areas." />
+  <style>
+    :root {
+      --primary: #0b68b8;
+      --primary-dark: #06457a;
+      --accent: #13b0ff;
+      --bg: #f4f7fb;
+      --text: #1f2933;
+      --muted: #6b7280;
+      --white: #ffffff;
+      --shadow-soft: 0 18px 30px rgba(15, 23, 42, 0.12);
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout utility */
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Header & Nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(244, 247, 251, 0.9);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: radial-gradient(circle at top, #13b0ff, #0b68b8);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.1rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text span:first-child {
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    .brand-text span:last-child {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-dark);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.25rem;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .nav-cta span.phone {
+      font-weight: 700;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 3.5rem 0 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-pill);
+      background: rgba(19, 176, 255, 0.08);
+      color: var(--primary-dark);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 0.8rem;
+      color: #020617;
+    }
+
+    .hero h1 span.highlight {
+      background: linear-gradient(135deg, #0b68b8, #13b0ff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 32rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-list {
+      list-style: none;
+      display: grid;
+      gap: 0.4rem;
+      margin-bottom: 1.6rem;
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    .hero-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+
+    .hero-list span.bullet {
+      margin-top: 0.2rem;
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.15);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.7rem;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary small {
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.8rem 1.1rem;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.02);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 0.9rem;
+      color: var(--primary-dark);
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .hero-meta strong {
+      display: block;
+      font-size: 0.9rem;
+      color: #020617;
+    }
+
+    /* Hero image card */
+    .hero-card {
+      border-radius: 24px;
+      background: radial-gradient(circle at top, #0b68b8 0%, #020617 60%);
+      padding: 1.4rem 1.4rem 1.2rem;
+      color: var(--white);
+      box-shadow: 0 28px 60px rgba(15, 23, 42, 0.45);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    .owner-photo {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.6);
+      min-height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .owner-photo span {
+      opacity: 0.9;
+    }
+
+    .hero-stats {
+      display: grid;
+      gap: 0.7rem;
+      font-size: 0.8rem;
+    }
+
+    .hero-stats h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .stat-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.55rem 0.65rem;
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.66);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .stat-row span.label {
+      font-size: 0.78rem;
+      opacity: 0.85;
+    }
+
+    .stat-row span.value {
+      font-weight: 700;
+      font-size: 0.86rem;
+    }
+
+    .water-orbit {
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(56, 189, 248, 0.25), transparent 55%),
+        radial-gradient(circle at 110% 15%, rgba(37, 99, 235, 0.4), transparent 55%);
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    /* Section base */
+    section {
+      padding: 2.75rem 0;
+    }
+
+    section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+      color: #020617;
+    }
+
+    section p.section-intro {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 32rem;
+      margin-bottom: 1.6rem;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.2rem;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    .service-tag {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary-dark);
+      opacity: 0.85;
+    }
+
+    .service-card h3 {
+      font-size: 1rem;
+      margin-top: 0.1rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .service-meta {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: #4b5563;
+    }
+
+    /* About + Process */
+    .split-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .about-body {
+      font-size: 0.95rem;
+      color: #4b5563;
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .about-body strong {
+      color: #020617;
+    }
+
+    .process-steps {
+      background: var(--white);
+      padding: 1.1rem 1.2rem;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 14px 36px rgba(15, 23, 42, 0.1);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      font-size: 0.9rem;
+    }
+
+    .process-steps h3 {
+      font-size: 1rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .step {
+      display: flex;
+      gap: 0.8rem;
+      padding: 0.6rem 0;
+      border-top: 1px dashed rgba(148, 163, 184, 0.6);
+    }
+
+    .step:first-of-type {
+      border-top: none;
+    }
+
+    .step-number {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: rgba(11, 104, 184, 0.1);
+      color: var(--primary-dark);
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-content h4 {
+      font-size: 0.9rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .step-content p {
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    /* Gallery & Reviews */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .gallery-item {
+      border-radius: var(--radius-lg);
+      padding: 1.2rem;
+      min-height: 120px;
+      background: linear-gradient(135deg, #0b68b8, #13b0ff);
+      color: var(--white);
+      display: flex;
+      align-items: flex-end;
+      font-size: 0.82rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery-item span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .gallery-item::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.35), transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(15, 23, 42, 0.4), transparent 55%);
+      opacity: 0.9;
+    }
+
+    .gallery-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.1rem;
+      margin-top: 1.3rem;
+    }
+
+    .review-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1rem;
+      font-size: 0.86rem;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .stars {
+      font-size: 0.78rem;
+      color: #fbbf24;
+    }
+
+    .reviewer {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* Service Area */
+    .service-area {
+      background: #0f172a;
+      color: var(--white);
+    }
+
+    .service-area h2 {
+      color: var(--white);
+    }
+
+    .service-area p.section-intro {
+      color: #e5e7eb;
+    }
+
+    .service-area-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+      gap: 2rem;
+      align-items: flex-start;
+      font-size: 0.9rem;
+    }
+
+    .service-area-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .chip {
+      padding: 0.35rem 0.8rem;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      font-size: 0.8rem;
+    }
+
+    .service-note {
+      margin-top: 0.7rem;
+      font-size: 0.8rem;
+      color: #cbd5f5;
+    }
+
+    .service-badge {
+      padding: 0.6rem 0.9rem;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(19, 176, 255, 0.12), rgba(11, 104, 184, 0.15));
+      border: 1px solid rgba(59, 130, 246, 0.6);
+      font-size: 0.82rem;
+      margin-top: 0.6rem;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.8rem;
+      align-items: flex-start;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      font-size: 0.9rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .contact-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .contact-value {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    form {
+      display: grid;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #4b5563;
+      margin-bottom: 0.2rem;
+      display: block;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(148, 163, 184, 0.9);
+      padding: 0.55rem 0.75rem;
+      font: inherit;
+      resize: vertical;
+      background: #f9fafb;
+    }
+
+    textarea {
+      min-height: 90px;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 1px rgba(19, 176, 255, 0.35);
+      background: #ffffff;
+    }
+
+    .form-row-inline {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .form-footnote {
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 1.4rem 0 1.7rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero-grid,
+      .split-grid,
+      .service-area-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-card {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding-top: 2.3rem;
+      }
+
+      section {
+        padding: 2.25rem 0;
+      }
+
+      .services-grid,
+      .gallery-grid,
+      .reviews-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .services-grid,
+      .gallery-grid,
+      .reviews-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-meta {
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+
+      .contact-card {
+        padding: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-logo">D</div>
+        <div class="brand-text">
+          <span>Drexel's Pressure Washing</span>
+          <span>Baltimore, Maryland</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="tel:12406901666">
+          <span>Call Now</span>
+          <span class="phone">240-690-1666</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Trusted exterior cleaning in Baltimore
+          </div>
+          <h1>
+            Bring your home back to a
+            <span class="highlight">fresh, clean shine.</span>
+          </h1>
+          <p class="hero-sub">
+            Drexel's Pressure Washing helps Baltimore homeowners and businesses
+            restore curb appeal with safe, professional exterior cleaning —
+            without damage, streaks, or hassle.
+          </p>
+
+          <ul class="hero-list">
+            <li>
+              <span class="bullet">✓</span>
+              <span>Soft wash &amp; pressure wash options tailored to each surface.</span>
+            </li>
+            <li>
+              <span class="bullet">✓</span>
+              <span>Licensed and insured exterior cleaning for homes &amp; small businesses.</span>
+            </li>
+            <li>
+              <span class="bullet">✓</span>
+              <span>Friendly, on-time service that respects your property and your schedule.</span>
+            </li>
+          </ul>
+
+          <div class="hero-actions">
+            <a class="btn-primary" href="#contact">
+              Get a Free Quote
+              <small>Send your photos or address</small>
+            </a>
+            <a class="btn-ghost" href="tel:12406901666">
+              Call or Text: <strong>240-690-1666</strong>
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div>
+              <strong>Same-week appointments</strong>
+              Available while slots last
+            </div>
+            <div>
+              <strong>Serving Baltimore &amp; beyond</strong>
+              Baltimore City, Baltimore County &amp; nearby areas
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="water-orbit"></div>
+          <div class="hero-card-inner">
+            <div class="owner-photo">
+              <!-- Replace this placeholder with your actual image in GitHub:
+                   <img src="images/owner-portrait.jpg" alt="Owner of Drexel's Pressure Washing, Aaron Johnson" />
+              -->
+              <span>
+                Owner portrait here<br />
+                (Use your updated photo with the slightly darker beard)
+              </span>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <h3>Meet the Owner: Aaron Johnson</h3>
+                <p>
+                  "I started Drexel's Pressure Washing to help families feel proud
+                  of their homes again — one clean driveway, siding, roof, and
+                  sidewalk at a time."
+                </p>
+              </div>
+              <div class="stat-row">
+                <span class="label">Local, owner-operated</span>
+                <span class="value">Hands-on on every job</span>
+              </div>
+              <div class="stat-row">
+                <span class="label">Typical response time</span>
+                <span class="value">&lt; 24 hours</span>
+              </div>
+              <div class="stat-row">
+                <span class="label">Ideal for</span>
+                <span class="value">Homes • Rentals • Small business fronts</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <h2>Exterior Cleaning Services</h2>
+        <p class="section-intro">
+          From green algae on siding to dark streaks on your roof and oil stains
+          on your driveway — Drexel's Pressure Washing tackles the grime so your
+          property can look freshly washed and well-kept again.
+        </p>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-tag">Home exteriors</div>
+            <h3>House Washing</h3>
+            <p>
+              Low-pressure soft washing that safely removes dirt, mildew,
+              cobwebs, and algae from vinyl, brick, and painted siding without
+              peeling paint or forcing water behind panels.
+            </p>
+            <div class="service-meta">
+              Best for: Siding, trim, porches, entryways, and garages.
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-tag">Roof care</div>
+            <h3>Roof Cleaning</h3>
+            <p>
+              Gentle soft wash treatment that helps clear black streaks, algae,
+              and organic buildup — giving your shingles a cleaner, newer look
+              and helping extend their life.
+            </p>
+            <div class="service-meta">
+              We follow manufacturer-friendly pressure and solutions.
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-tag">Concrete &amp; walkways</div>
+            <h3>Driveway &amp; Walkway Cleaning</h3>
+            <p>
+              Deep clean concrete, sidewalks, patios, and steps to remove
+              grime, tire marks, and years of buildup so your entrance looks
+              bright and inviting again.
+            </p>
+            <div class="service-meta">
+              Ideal for: Driveways, sidewalks, patios, and stoops.
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-tag">Details matter</div>
+            <h3>Gutters, Fencing &amp; More</h3>
+            <p>
+              Gutter face brightening, fence cleaning, pool decks, and other
+              specialty areas to give your property a clean, finished look from
+              the street to the backyard.
+            </p>
+            <div class="service-meta">
+              Ask about bundled packages to save on multi-surface cleaning.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About + Process -->
+    <section id="about">
+      <div class="container split-grid">
+        <div>
+          <h2>Why Drexel’s Pressure Washing?</h2>
+          <p class="section-intro">
+            You’re not just hiring a machine — you’re trusting someone with your
+            home, your investments, and how your property looks to the world.
+          </p>
+          <div class="about-body">
+            <p>
+              <strong>Local and hands-on.</strong> Drexel’s is a local,
+              owner-operated service. When you book, you’re dealing directly
+              with Aaron — not a random rotating crew. That means clearer
+              communication, real accountability, and pride in every job.
+            </p>
+            <p>
+              <strong>Care over shortcuts.</strong> We choose the right pressure,
+              tips, and cleaning methods for each surface instead of "blasting"
+              everything the same. The goal is a clean, healthy surface — not
+              damaged siding or etched concrete.
+            </p>
+            <p>
+              <strong>Respect for your time &amp; property.</strong> We show up on
+              time, walk the property with you, protect surrounding areas as
+              needed, and leave things cleaner than we found them — including
+              our hoses and equipment.
+            </p>
+            <p>
+              <strong>Clear pricing and communication.</strong> You’ll know what’s
+              included, what it costs, and what to expect before we start. No
+              surprise add-ons after the fact.
+            </p>
+          </div>
+        </div>
+
+        <aside class="process-steps">
+          <h3>How the Process Works</h3>
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Share your project</h4>
+              <p>
+                Call, text, or send photos of the areas you’d like cleaned. You
+                can also share your address for a quick drive-by evaluation
+                when possible.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Receive a clear quote</h4>
+              <p>
+                We’ll provide simple, upfront pricing and recommend the best
+                package for your home or business. No confusing line items.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Schedule your clean</h4>
+              <p>
+                Choose a date and time that works for you. We’ll coordinate
+                arrival, water access, and parking so things go smoothly.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Walk-through &amp; after-care</h4>
+              <p>
+                Once cleaning is finished, we walk the property with you,
+                answer questions, and share tips on how to keep surfaces looking
+                their best.
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Gallery & Reviews -->
+    <section id="gallery">
+      <div class="container">
+        <h2>Before &amp; After Results</h2>
+        <p class="section-intro">
+          Nothing sells like seeing the difference. Swap these placeholders out
+          with your real Drexel’s before/after photos to show what you do best.
+        </p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <span>Driveway: dark &amp; stained ➝ bright, clean concrete</span>
+          </div>
+          <div class="gallery-item">
+            <span>Green siding ➝ fresh, even house wash</span>
+          </div>
+          <div class="gallery-item">
+            <span>Black roof streaks ➝ lighter, more uniform roof surface</span>
+          </div>
+        </div>
+        <p class="gallery-note">
+          In your GitHub repo, replace these blocks with real images:
+          <code>/images/before-after-1.jpg</code>,
+          <code>/images/before-after-2.jpg</code>, etc. You can keep the same layout.
+        </p>
+
+        <div id="reviews" class="reviews-grid">
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              “Professional, polite, and the house looks like it was just
+              painted. The sidewalk and steps are night and day different.”
+            </p>
+            <div class="reviewer">Homeowner in Baltimore, MD</div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              “Easy to book, clear quote, and the job was done right. Our
+              driveway and patio went from dull and dirty to bright and clean.”
+            </p>
+            <div class="reviewer">Residential client – Baltimore County</div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              “Front of the property looks 100× better. I’d recommend Drexel’s
+              to any landlord or small business that wants to boost curb appeal.”
+            </p>
+            <div class="reviewer">Rental property owner</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="service-area">
+      <div class="container">
+        <h2>Service Area</h2>
+        <p class="section-intro">
+          Drexel’s Pressure Washing is based in Baltimore, MD and serves
+          surrounding neighborhoods and nearby communities.
+        </p>
+
+        <div class="service-area-grid">
+          <div>
+            <div class="service-area-list">
+              <span class="chip">Baltimore City</span>
+              <span class="chip">Baltimore County</span>
+              <span class="chip">Randallstown</span>
+              <span class="chip">Owings Mills</span>
+              <span class="chip">Pikesville</span>
+              <span class="chip">Catonsville</span>
+              <span class="chip">Towson</span>
+              <span class="chip">Nearby Maryland areas</span>
+            </div>
+            <p class="service-note">
+              Not sure if you’re in range? Reach out with your address and we’ll
+              let you know quickly if we can get you on the schedule.
+            </p>
+          </div>
+
+          <div>
+            <div class="service-badge">
+              <strong>Ideal for:</strong> Homeowners, landlords, small commercial
+              storefronts, churches, and community properties wanting a clean,
+              cared-for look from the street.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <h2>Request Your Free Quote</h2>
+        <p class="section-intro">
+          Ready to bring your home or property back to life? Call, text, or send
+          a quick message using the form below. Share photos if you can for the
+          fastest, most accurate quote.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-row">
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">
+                <a href="tel:12406901666">240-690-1666</a>
+              </span>
+            </div>
+            <div class="contact-row">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">
+                <a href="mailto:adjohnson765@gmail.com">adjohnson765@gmail.com</a>
+              </span>
+            </div>
+            <div class="contact-row">
+              <span class="contact-label">Based in</span>
+              <span class="contact-value">Baltimore, Maryland</span>
+            </div>
+            <div class="form-footnote">
+              You can also text pictures of the areas you’d like cleaned to help
+              speed up your quote.
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <!-- This is a front-end only form. You can later connect it
+                 to a service like Formspree, Getform, or a simple backend. -->
+            <form>
+              <div class="form-row-inline">
+                <div>
+                  <label for="name">Name</label>
+                  <input id="name" type="text" name="name" placeholder="Your name" />
+                </div>
+                <div>
+                  <label for="phone">Phone</label>
+                  <input id="phone" type="tel" name="phone" placeholder="Best number" />
+                </div>
+              </div>
+
+              <div class="form-row-inline">
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" type="email" name="email" placeholder="you@example.com" />
+                </div>
+                <div>
+                  <label for="address">Property location</label>
+                  <input id="address" type="text" name="address" placeholder="City / address" />
+                </div>
+              </div>
+
+              <div>
+                <label for="services">What do you need cleaned?</label>
+                <input
+                  id="services"
+                  type="text"
+                  name="services"
+                  placeholder="Example: house wash + driveway + front steps"
+                />
+              </div>
+
+              <div>
+                <label for="details">Anything we should know?</label>
+                <textarea
+                  id="details"
+                  name="details"
+                  placeholder="Tell us about stains, age of surfaces, or timing needs."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary">
+                Submit (Demo Only)
+              </button>
+
+              <p class="form-footnote">
+                This form is front-end only right now. To start collecting
+                messages, connect it to a simple form service or custom backend.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        © <span id="year"></span> Drexel's Pressure Washing. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
+
